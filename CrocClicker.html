@@ -1,0 +1,35 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E</script> //importing jQuery
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Croc Clicker</title>
+    </head>
+    <body>
+    
+    <h1>Challenge: Croc Clicker</h1>
+    <img id="crocs" src="https://www.kasandbox.org/programming-images/animals/crocodiles.png" width="300" alt="Crocodiles chilling">
+    <div id="results"></div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+     
+     
+    <script>
+    var numClicks = 0;//start num clicks
+    
+    //function that does the event for displaying when click updated
+    var text = function() {
+         $("#results").text("You clicked " + numClicks + " times"); 
+        };
+ 
+ //event listener. when click on picture it listens on: numClicks increase by one & call text() so that update what display
+    $("#crocs").on("click", function(){
+        numClicks++;
+        text();
+    });
+    
+    </script>
+    
+
+    </body>
+</html>

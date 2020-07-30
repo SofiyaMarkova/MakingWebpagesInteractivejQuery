@@ -1,0 +1,42 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js%22%3E</script> //importing jQuery
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Challenge: Spot the Dog</title>
+        <style>
+            .dot {
+                border-radius: 10px;
+                background: black;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <img id="dog-pic" src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Alopekis_white_male.jpg" width="500" alt="White dog">
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    
+    //event listner for when click on dog-pic the event is called "click" and runs the function event
+    $("#dog-pic").on("click", function(event) {
+        var $dot = $("<div></div>");
+        //when click a new object for a dot made
+        $dot.addClass("dot");
+        //for the $dot object made it positions it now
+        $dot.css("position", "absolute");
+        $dot.css("top", event.pageY + "px");
+        $dot.css("left", event.pageX + "px");
+        
+        //to display where positioned add $dot with set position to body
+        $dot.appendTo("body");
+    });
+    </script>
+    
+
+    </body>
+</html>
